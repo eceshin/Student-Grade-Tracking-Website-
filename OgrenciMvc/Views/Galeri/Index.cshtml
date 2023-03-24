@@ -1,0 +1,28 @@
+﻿@using OgrenciMvc.Models.EntityFramework
+@model List<TBLOGRENCILER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ÖĞRENCİ FOTOĞRAF</th>
+        <th>ÖĞRENCİ AD</th>
+
+        <th>ÖĞRENCİ SOYAD</th>
+    </tr>
+
+
+    <tbody>
+        @foreach (var ogrenci in Model)
+        {
+            <tr>
+                <td >@ogrenci.OGRFOTOGRAF</td>
+                <td>@ogrenci.OGRAD</td>
+                <td>@ogrenci.OGRSOYADI</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
